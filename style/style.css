@@ -1,3 +1,49 @@
-#carousel{
-    width: 1100px;
+/*https://colorhunt.co/palette/eadeb8cfb784c56824a09f57*/
+body{
+    background-color: #EADEB8;
+	font-family: 'Candara','sans-serif';
+	font-weight: 300;
+    margin: 0;
+}
+nav.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+}
+nav ul{
+    list-style: none;
+}
+.nav-link{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 100%;
+    color: #C56824;
+}
+#home
+{
+    background: #c7b691;
+    color: floralwhite;
+	font-size: 180%;
+    font-weight: 300;
+    font-style: italic;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: url(../img/bghome.png);
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#home h1{
+    text-align: center;
+}
+div img{
+    width: 100px;
+}
+h3{
+    color: #7c7c42;
 }
