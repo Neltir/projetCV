@@ -40,9 +40,9 @@
     <section id="home">
         <!--Home en pleine page en dessous de la nav-->
         <div>
-            <h1>Jessica Dubouchaud <br> Developpeuse Web</h1>
+            <h1>Jessica Dubouchaud</h1> <br> <h2>Developpeuse Web</h2>
         </div>
-        <div class="row">
+        <div class="row logo">
             <div class="col-2">
                 <a href="https://github.com/Neltir"><img src="img/logogit.jpg" alt="logo GitHub"></a>
             </div>
@@ -57,7 +57,7 @@
     <section id="about">
         <!--Ici à gauche: les specs avec un gif en pixel qui saute/ à droite un petit résumé-->
         <div class="row">
-            <div class="col-5">
+            <div class="col-5 profil">
                 <div class="texte">
                     <p>
                         <b>Nom :</b>
@@ -78,9 +78,23 @@
                 <h3>A propos de moi</h3>
 				<p>Après 5 années enrichissantes en Gendarmerie, je m’oriente vers <em>l’informatique</em>. Un domaine que je connais bien grâce à ce précédent emploi mais aussi à mes <em>passions</em>. Les compétences acquises grâce à elles sont aujourd’hui des forces. Mon parcours ne laissait pas entrevoir mon avenir et pourtant j’ai pu acquérir des outils indispensables à ma réussite et mon épanouissement professionnel.</p>
             </div>
-            <div class="col-12">
-                <button class="item" id="cont" onclick="window.location.href='#contact'">Me contacter</button>
-                <button class="item" id="CV" onclick="window.open('doc/CV.pdf')">Télécharger mon CV</button>
+            <div class="col-12 contact"> 
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buttonmodal">Me contacter</button>
+                <div class="modal fade" id="buttonmodal" tabindex="-1" role="dialog" aria-labelledby="buttonmodaltitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="buttonmodaltitle">Contact</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Ici faire deux boutons: contact par tel et contact par email.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.open('doc/CV.pdf')">Télécharger mon CV</button>
             </div>
         </div>
     </section>

@@ -17,19 +17,15 @@ nav ul{
 }
 .nav-link{
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 100%;
     color: #C56824;
+    padding: 0.5rem 2rem;
 }
 #home
 {
     background: #c7b691;
     color: floralwhite;
-	font-size: 180%;
-    font-weight: 300;
-    font-style: italic;
-    padding-left: 2%;
-    padding-right: 2%;
     background-image: url(../img/bghome.png);
     height: 100vh;
     position: relative;
@@ -37,13 +33,44 @@ nav ul{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 15% 0;
 }
-#home h1{
+h1, h2{
     text-align: center;
 }
-div img{
-    width: 100px;
+h1{
+    font-size: 60px;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 50px;
+}
+.logo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 5% 0;
+}
+.logo img{
+    width: 70px;
 }
 h3{
     color: #7c7c42;
+}
+#about{
+    padding: 10% 10%;
+    height: 80vh;
+}
+#about img{
+    height: 40vh;
+    width: auto;
+}
+.profil{
+    padding: 0 15%;
+}
+.contact{
+    text-align: center;
+}
+.contact button{
+    border-radius: 5px;
 }
