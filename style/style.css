@@ -4,6 +4,7 @@ body{
 	font-family: 'Candara','sans-serif';
 	font-weight: 300;
     margin: 0;
+    font-size: 22px;
 }
 nav.navbar{
     position: fixed;
@@ -18,7 +19,7 @@ nav ul{
 .nav-link{
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 100%;
+    font-size: 18px;
     color: #C56824;
     padding: 0.5rem 2rem;
 }
@@ -57,8 +58,8 @@ h2{
 h3{
     color: #7c7c42;
 }
-#about{
-    padding: 10% 10%;
+#about, #skills{
+    margin: 5% 10%;
     height: 80vh;
 }
 #about img{
@@ -70,7 +71,51 @@ h3{
 }
 .contact{
     text-align: center;
+    margin: 5%;
 }
 .contact button{
     border-radius: 5px;
+    background-color: #C56824;
+    font-size: 22px;
+    border: none;
+}
+.modal-dialog {
+    margin: 20rem auto;
+}
+.competences{
+    display: table;
+    width: 80%;
+}
+.competence{
+    display: table-cell;
+}
+.competence p{
+    margin: 10% 0;
+    font-size: 22px;
+}
+meter{
+    width: 50%;
+}
+@media (max-width:900px){
+    #home{
+        padding-top: 30%;
+    }
+    #about{
+        margin: 10% 10%;
+    }
+    p{
+        font-size: 22px;
+    }
+    .profil{
+        padding: 0;
+    }
+    .contact{
+        padding: 5% 10%;
+    }
+    .contact button{
+
+    }
+    .competence{
+        display: block;
+    }
 }
