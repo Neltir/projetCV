@@ -59,7 +59,7 @@ h3{
     color: #7c7c42;
 }
 #about, #skills{
-    margin: 5% 10%;
+    padding: 10% 10%;
     height: 80vh;
 }
 #about img{
@@ -78,6 +78,9 @@ h3{
     background-color: #C56824;
     font-size: 22px;
     border: none;
+}
+.contact button:hover{
+    background-color: #8b532b;
 }
 .modal-dialog {
     margin: 20rem auto;
