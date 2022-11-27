@@ -1,27 +1,47 @@
 /*https://colorhunt.co/palette/eadeb8cfb784c56824a09f57*/
 body{
-    background-color: #EADEB8;
+    background-color: #ece5cb;
 	font-family: 'Candara','sans-serif';
 	font-weight: 300;
     margin: 0;
     font-size: 22px;
+    border: 6px solid #7c7c42;
 }
-nav.navbar{
+.navigationTop{
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
+}
+.navigationTop, .navigationBot{
     width: 100%;
+    background-color: #dcdfcd;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-nav ul{
+.navigationBot{
+    bottom: 0;
+    z-index: 9999;
+}
+.navigationTop ul, .navigationBot ul{
     list-style: none;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
 }
-.nav-link{
+.navigationTop ul li a, .navigationBot ul li a{
     text-transform: uppercase;
-    font-weight: 500;
-    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 20px;
     color: #C56824;
-    padding: 0.5rem 2rem;
+}
+/*Pour que les liens de la nav tombent un peu avant, offset:*/
+:target{
+    scroll-margin-top: 120px;
 }
 #home
 {
@@ -29,6 +49,7 @@ nav ul{
     color: floralwhite;
     background-image: url(../img/bghome.png);
     height: 100vh;
+    width: 100%;
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -55,23 +76,29 @@ h2{
 .logo img{
     width: 70px;
 }
+.container{
+    width: 80%;
+    margin: 5% auto;
+}
+section{
+    padding-top: 5%;
+}
 h3{
     color: #7c7c42;
 }
-#about, #skills{
-    padding: 10% 10%;
-    height: 80vh;
-}
 #about img{
-    height: 40vh;
+    height: 15em;
     width: auto;
 }
 .profil{
     padding: 0 15%;
 }
 .contact{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
-    margin: 5%;
+    margin: 5% auto;
 }
 .contact button{
     border-radius: 5px;
@@ -99,24 +126,32 @@ h3{
 meter{
     width: 50%;
 }
+.carouselOuter{
+    display: flex;
+    justify-content: center;
+}
+#carousel{
+    width: 65%;
+}
 @media (max-width:900px){
     #home{
         padding-top: 30%;
+        height: 80vh;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .logo img{
+        width: 50px;
     }
     #about{
         margin: 10% 10%;
     }
     p{
-        font-size: 22px;
-    }
-    .profil{
-        padding: 0;
-    }
-    .contact{
-        padding: 5% 10%;
-    }
-    .contact button{
-
+        font-size: 25px;
     }
     .competence{
         display: block;
