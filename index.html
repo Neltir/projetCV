@@ -32,6 +32,15 @@
                 </li>
             </ul>
         </nav>
+        <div class="navigationTopMobile">
+            <select name="barrenav" id="">
+                <option value="Home"><a href="#home">Home</a></option>
+                <option value="A propos"><a href="#about">A propos</a></option>
+                <option value="Compétences"><a href="#skills">Compétences</a></option>
+                <option value="Parcours"><a href="#experience">Parcours</a></option>
+                <option value="Portfolio"><a href="#portfolio">Portfolio</a></option>
+            </select>
+        </div>
     </header>
     <section id="home">
         <!--Home en pleine page en dessous de la nav-->
@@ -52,7 +61,7 @@
     </section>
     <div class="container">
         <section id="about">
-            <!--Ici à gauche: les specs avec un gif en pixel qui saute/ à droite un petit résumé-->
+            <!--Ici à gauche: les specs avec un gif en pixel / à droite un petit résumé-->
             <div class="row">
                 <div class="col-5 profil">
                     <div class="texte">
@@ -61,7 +70,7 @@
                             Jessica Dubouchaud
                             <br>
                             <b>Age :</b>
-                            23 ans
+                            24 ans
                             <br>
                             <b>Ville :</b>
                             Bourges
@@ -73,7 +82,11 @@
                 </div>
                 <article class="col-7">
                     <h3>A propos de moi</h3>
-                    <p>Après 5 années enrichissantes en Gendarmerie, je m’oriente vers <em>l’informatique</em>. Un domaine que je connais bien grâce à ce précédent emploi mais aussi à mes <em>passions</em>. Les compétences acquises grâce à elles sont aujourd’hui des forces. Mon parcours ne laissait pas entrevoir mon avenir et pourtant j’ai pu acquérir des outils indispensables à ma réussite et mon épanouissement professionnel.</p>
+                    <p>Après 5 années enrichissantes en Gendarmerie, je m’oriente vers <em>l’informatique</em>. 
+                        Un domaine que je connais bien grâce à ce précédent emploi mais aussi à mes <em>passions</em>. 
+                        Les compétences acquises grâce à elles sont aujourd’hui des forces. 
+                        Mon parcours ne laissait pas entrevoir mon avenir et pourtant j’ai pu acquérir des outils 
+                        indispensables à ma réussite et mon épanouissement professionnel.</p>
                     <div class="row">
                         <div class="col-12 contact"> 
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buttonmodal">Me contacter</button>
@@ -125,7 +138,7 @@
             </div>
             <article class="col-5">
                 <!--les softs skills et hobbies-->
-                <div class="container">
+                <div>
                     <h3>Soft skills:</h3>
                     <ul>
                         <li>Capacité d’analyse</li>
@@ -136,7 +149,7 @@
                         <li>Gestion de projet</li>
                     </ul>
                 </div>
-                <div class="container">
+                <div>
                     <h3>Hobbies:</h3>
                     <p>Jeux vidéos, dessin et peinture, animation 2D, cuisine, Web-design</p>
                 </div>
@@ -145,11 +158,49 @@
         <section id="experience">
             <!--une timeline verticale avec les précédents emplois-->
             <h3>Mon parcours</h3>
-            <div>
-
-            </div>
-            <div>
-
+            <div class="row">
+                <article class="col">
+                    <h4>Expériences professionnelles</h4>
+                    <div class="para">
+                        <h5>Gendarme Adjoint Volontaire</h5>
+                        <p><i>Janvier 2018 – Février 2022 à MOULINS(03)</i></p>
+                        <p>
+                            Mission d’investigation et rapprochement judiciaire <br>
+                            Mise en place et formation à un nouvel outil de travail <br>
+                            Communication et travail en équipe <br>
+                            Etablir et suivre une procédure de travail <br>
+                            Requête de recherche dans une base de données pour statistiques <br>
+                            Mise en forme et présentation de données aux autorités supérieures
+                        </p>
+                    </div>
+                    <div class="para">
+                        <h5>Stage de Graphisme</h5>
+                        <p><i>Décembre 2012 à BRIVE-LA-GAILLARDE(19)</i></p>
+                        <p>Stage en entreprise de Graphisme dans le cadre scolaire</p>
+                    </div>
+                </article>
+                <article class="col">
+                    <h4>Formations et certifications</h4>
+                    <div class="para">
+                        <h5>Développement Web et Web mobile</h5>
+                        <p><i>Septembre 2022</i></p>
+                    </div>
+                    <div class="para">
+                        <h5>Test TOEIC - Niveau B2</h5>
+                        <p><i>Decembre 2020</i></p>
+                    </div>
+                    <div class="para">
+                        <h5>
+                            Certificat de compétences de citoyen de 
+                            sécurité civile - PSC1
+                        </h5>
+                        <p><i>Avril 2017</i></p>
+                    </div>
+                    <div class="para">
+                        <h5>Baccalauréat Général Scientifique</h5>
+                        <p><i>Juin 2016</i></p>
+                    </div>
+                </article>
             </div>
         </section>
         <section id="portfolio">

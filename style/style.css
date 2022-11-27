@@ -6,6 +6,22 @@ body{
     margin: 0;
     font-size: 22px;
     border: 6px solid #7c7c42;
+    overflow-x: hidden;
+}
+.navigationTopMobile{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navigationTopMobile select{
+    background-color: #bcbeae;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    color: #C56824;
+    font-weight: bold;
 }
 .navigationTop{
     position: fixed;
@@ -41,10 +57,9 @@ body{
 }
 /*Pour que les liens de la nav tombent un peu avant, offset:*/
 :target{
-    scroll-margin-top: 120px;
+    scroll-margin-top: 70px;
 }
-#home
-{
+#home{
     background: #c7b691;
     color: floralwhite;
     background-image: url(../img/bghome.png);
@@ -77,24 +92,29 @@ h2{
     width: 70px;
 }
 .container{
-    width: 80%;
+    width: 85%;
     margin: 5% auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 section{
-    padding-top: 5%;
+    padding: 5%;
 }
 h3{
     color: #7c7c42;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 2px;
 }
 #about img{
     height: 15em;
     width: auto;
 }
 .profil{
-    padding: 0 15%;
+    padding: 0 10%;
 }
 .contact{
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -126,17 +146,44 @@ h3{
 meter{
     width: 50%;
 }
+#experience .col{
+    border-left: 2px dotted #bcbeae;
+    border-right: 2px dotted #bcbeae;
+}
+.para{
+    width: 90%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+h4{
+    text-decoration: underline;
+    padding-bottom: 2%;
+}
+h5{
+    line-height: 25px;
+}
 .carouselOuter{
     display: flex;
     justify-content: center;
+    padding-top: 5%;
 }
 #carousel{
     width: 65%;
 }
 @media (max-width:900px){
+    body{
+        font-size: 20px;
+    }
+    .navigationTop{
+        display: none;
+    }
+    .navigationTopMobile{
+        display: block;
+        height: 40px;
+    }
     #home{
         padding-top: 30%;
-        height: 80vh;
+        height: 70vh;
     }
     h1{
         font-size: 40px;
@@ -144,16 +191,32 @@ meter{
     h2{
         font-size: 30px;
     }
+    h3{
+        font-size: 27px;
+    }
+    .container{
+        width: 90%;
+    }
+    .section{
+        margin: 8% 0;
+    }
+    .row:not(#home .row){
+        display: block;
+    }
+    .col, .col-1, .container .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+        width: 100%;
+    }
     .logo img{
         width: 50px;
     }
-    #about{
-        margin: 10% 10%;
-    }
-    p{
-        font-size: 25px;
-    }
     .competence{
         display: block;
+    }
+    .contact button{
+        font-size: 17px;
+        width: 40%;
+    }
+    #carousel{
+        width: 100%;
     }
 }
