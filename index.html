@@ -13,29 +13,34 @@
 <body>
     <header>
         <!--Une barre de navigation fixé en haut à droite avec scrollspy-->
-        <nav class="navbar bg-light px-3 mb-3">
-            <audio controls>
-                <source src="doc/empireOfTheSun.mp3" type="audio/mpeg">
-                <p>Votre navigateur est nul!</p>
-            </audio>
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
+        <nav class="navigationTop">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">A propos</a>
+                <li>
+                    <a href="#about">A propos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Compétences</a>
+                <li>
+                    <a href="#skills">Compétences</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">Parcours</a>
+                <li>
+                    <a href="#experience">Parcours</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
             </ul>
         </nav>
+        <div class="navigationTopMobile">
+            <select name="barrenav" id="">
+                <option value="Home"><a href="#home">Home</a></option>
+                <option value="A propos"><a href="#about">A propos</a></option>
+                <option value="Compétences"><a href="#skills">Compétences</a></option>
+                <option value="Parcours"><a href="#experience">Parcours</a></option>
+                <option value="Portfolio"><a href="#portfolio">Portfolio</a></option>
+            </select>
+        </div>
     </header>
     <section id="home">
         <!--Home en pleine page en dessous de la nav-->
@@ -54,144 +59,192 @@
             </div>
         </div>
     </section>
-    <section id="about">
-        <!--Ici à gauche: les specs avec un gif en pixel qui saute/ à droite un petit résumé-->
-        <div class="row">
-            <div class="col-5 profil">
-                <div class="texte">
-                    <p>
-                        <b>Nom :</b>
-                        Jessica Dubouchaud
-                        <br>
-                        <b>Age :</b>
-                        23 ans
-                        <br>
-                        <b>Ville :</b>
-                        Bourges
-                    </p>
-                </div>
-                <div class="imgcontainer">
-                    <img src="img/pixel.gif" alt="jessica dubouchaud gif pixel">
-                </div>
-            </div>
-            <div class="col-7">
-                <h3>A propos de moi</h3>
-				<p>Après 5 années enrichissantes en Gendarmerie, je m’oriente vers <em>l’informatique</em>. Un domaine que je connais bien grâce à ce précédent emploi mais aussi à mes <em>passions</em>. Les compétences acquises grâce à elles sont aujourd’hui des forces. Mon parcours ne laissait pas entrevoir mon avenir et pourtant j’ai pu acquérir des outils indispensables à ma réussite et mon épanouissement professionnel.</p>
-            </div>
-            <div class="col-12 contact"> 
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buttonmodal">Me contacter</button>
-                <div class="modal fade" id="buttonmodal" tabindex="-1" role="dialog" aria-labelledby="buttonmodaltitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="buttonmodaltitle">Contact</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer">
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p><b>Ci-dessous mes informations:</b></p>
-                                <p>
-                                    Téléphone
-                                    <span><a class="tel" href="tel:0769653318">07.69.65.33.18</a></span>
-                                </p>
-                                <p>
-                                    Email
-                                    <span><a class="email" href="mailto:jessica.dubouchaud@campuscci18.fr">jessica.dubouchaud@campuscci18.fr</a></span>
-                                </p>
-                            </div>
-                        </div>
+    <div class="container">
+        <section id="about">
+            <!--Ici à gauche: les specs avec un gif en pixel / à droite un petit résumé-->
+            <div class="row">
+                <div class="col-5 profil">
+                    <div class="texte">
+                        <p>
+                            <b>Nom :</b>
+                            Jessica Dubouchaud
+                            <br>
+                            <b>Age :</b>
+                            24 ans
+                            <br>
+                            <b>Ville :</b>
+                            Bourges
+                        </p>
+                    </div>
+                    <div class="imgcontainer">
+                        <img src="img/pixel.gif" alt="jessica dubouchaud gif pixel">
                     </div>
                 </div>
-                <button class="btn btn-primary" onclick="window.open('doc/CV.pdf')">Télécharger mon CV</button>
+                <article class="col-7">
+                    <h3>A propos de moi</h3>
+                    <p>Après 5 années enrichissantes en Gendarmerie, je m’oriente vers <em>l’informatique</em>. 
+                        Un domaine que je connais bien grâce à ce précédent emploi mais aussi à mes <em>passions</em>. 
+                        Les compétences acquises grâce à elles sont aujourd’hui des forces. 
+                        Mon parcours ne laissait pas entrevoir mon avenir et pourtant j’ai pu acquérir des outils 
+                        indispensables à ma réussite et mon épanouissement professionnel.</p>
+                    <div class="row">
+                        <div class="col-12 contact"> 
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buttonmodal">Me contacter</button>
+                            <div class="modal fade" id="buttonmodal" tabindex="-1" role="dialog" aria-labelledby="buttonmodaltitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="buttonmodaltitle">Contact</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer">
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><b>Ci-dessous mes informations:</b></p>
+                                            <p>
+                                                Téléphone
+                                                <span><a class="tel" href="tel:0769653318" target="_blank">07.69.65.33.18</a></span>
+                                            </p>
+                                            <p>
+                                                Email
+                                                <span><a class="email" href="mailto:jessica.dubouchaud@campuscci18.fr" target="_blank">jessica.dubouchaud@campuscci18.fr</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" onclick="window.open('doc/CV.pdf')">Télécharger mon CV</button>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
-    <section id="skills" class="row">
-        <div class="col-7">
-            <!--plusieurs barres de progressions pour les compétences-->
-            <h3>Compétences professionnelles:</h3>
-            <div class="competences">
-                <div class="competence">
-                    <p><meter value="40" max="100"></meter>HTML, CSS</p>
-                    <p><meter value="1" max="100"></meter>PHP</p>
-                    <p><meter value="1" max="100"></meter>ReacNative</p>
+        </section>
+        <section id="skills" class="row">
+            <div class="col-6">
+                <!--plusieurs barres de progressions pour les compétences-->
+                <h3>Compétences professionnelles:</h3>
+                <div class="competences">
+                    <div class="competence">
+                        <p><meter value="40" max="100"></meter>HTML, CSS</p>
+                        <p><meter value="1" max="100"></meter>PHP</p>
+                        <p><meter value="1" max="100"></meter>ReacNative</p>
+                    </div>
+                    <div class="competence">
+                        <p><meter value="1" max="100"></meter>JavaScript</p>
+                        <p><meter value="5" max="100"></meter>MySql</p>
+                        <p><meter value="1" max="100"></meter>Laravel</p>
+                    </div>
                 </div>
-                <div class="competence">
-                    <p><meter value="1" max="100"></meter>JavaScript</p>
-                    <p><meter value="5" max="100"></meter>MySql</p>
-                    <p><meter value="1" max="100"></meter>Laravel</p>
+                
+            </div>
+            <article class="col-6">
+                <!--les softs skills et hobbies-->
+                <div>
+                    <h3>Soft skills:</h3>
+                    <ul>
+                        <li>Capacité d’analyse</li>
+                        <li>Créativité</li>
+                        <li>Esprit de discipline</li>
+                        <li>Soif de connaissance</li>
+                        <li>Adaptabilité</li>
+                        <li>Gestion de projet</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Hobbies:</h3>
+                    <p>Jeux vidéos, dessin et peinture, animation 2D, cuisine, Web-design</p>
+                </div>
+            </article>
+        </section>
+        <section id="experience">
+            <!--une timeline verticale avec les précédents emplois-->
+            <h3>Mon parcours</h3>
+            <div class="row">
+                <article class="col">
+                    <h4>Expériences professionnelles</h4>
+                    <div class="para">
+                        <h5>Gendarme Adjoint Volontaire</h5>
+                        <p><i>Janvier 2018 – Février 2022 à MOULINS(03)</i></p>
+                        <p>
+                            Mission d’investigation et rapprochement judiciaire <br>
+                            Mise en place et formation à un nouvel outil de travail <br>
+                            Communication et travail en équipe <br>
+                            Etablir et suivre une procédure de travail <br>
+                            Requête de recherche dans une base de données pour statistiques <br>
+                            Mise en forme et présentation de données aux autorités supérieures
+                        </p>
+                    </div>
+                    <div class="para">
+                        <h5>Stage de Graphisme</h5>
+                        <p><i>Décembre 2012 à BRIVE-LA-GAILLARDE(19)</i></p>
+                        <p>Stage en entreprise de Graphisme dans le cadre scolaire</p>
+                    </div>
+                </article>
+                <article class="col">
+                    <h4>Formations et certifications</h4>
+                    <div class="para">
+                        <h5>Développement Web et Web mobile</h5>
+                        <p><i>Septembre 2022</i></p>
+                    </div>
+                    <div class="para">
+                        <h5>Test TOEIC - Niveau B2</h5>
+                        <p><i>Decembre 2020</i></p>
+                    </div>
+                    <div class="para">
+                        <h5>
+                            Certificat de compétences de citoyen de 
+                            sécurité civile - PSC1
+                        </h5>
+                        <p><i>Avril 2017</i></p>
+                    </div>
+                    <div class="para">
+                        <h5>Baccalauréat Général Scientifique</h5>
+                        <p><i>Juin 2016</i></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="portfolio">
+            <!--un carousel avec mes dessins-->
+            <h3>Mes dessins</h3>
+            <div class="carouselOuter">
+                <div id="carousel" class="carousel slide" data_bs_ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-label="Photo 1" aria-current="true" class="active"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Photo 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Photo 3"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Photo 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/janna.jpg" class="d-block img-fluid mx-auto" alt="Photo 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/tatouage.jpg" class="d-block img-fluid mx-auto" alt="Photo 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/itto.jpg" class="d-block img-fluid mx-auto" alt="Photo 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/bully.jpg" class="d-block img-fluid mx-auto" alt="Photo 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Précédent</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Suivant</span>
+                    </button>
                 </div>
             </div>
-            
-        </div>
-        <div class="col-5">
-            <!--les softs skills et hobbies-->
-            <div class="container">
-                <h3>Soft skills:</h3>
-                <ul>
-                    <li>Capacité d’analyse</li>
-                    <li>Créativité</li>
-                    <li>Esprit de discipline</li>
-                    <li>Soif de connaissance</li>
-                    <li>Adaptabilité</li>
-                    <li>Gestion de projet</li>
-                </ul>
-            </div>
-            <div class="container">
-                <h3>Hobbies:</h3>
-				<p>Jeux vidéos, dessin et peinture, animation 2D, cuisine, Web-design</p>
-            </div>
-        </div>
-    </section>
-    <section id="experience">
-        <!--une timeline verticale avec les précédents emplois-->
-        <h3>Mon parcours</h3>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-    </section>
-    <section id="portfolio">
-        <!--un carousel avec des dessins-->
-        <h3>Mes dessins</h3>
-        <div id="carousel" class="carousel slide" data_bs_ride="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Photo 1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Photo 2"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Photo 3"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Photo 4"></button>
-            </div>
-            <div class="carousel-inner" style="height: 900px">
-                <div class="carousel-item active">
-                    <img src="img/janna.jpg" class="d-block img-fluid mx-auto" alt="Photo 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/tatouage.jpg" class="d-block img-fluid mx-auto" alt="Photo 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/itto.jpg" class="d-block img-fluid mx-auto" alt="Photo 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/bully.jpg" class="d-block img-fluid mx-auto" alt="Photo 4">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Précédent</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Suivant</span>
-            </button>
-        </div>
-    </section>
+        </section>
+    </div>
     <footer>
-        <nav>
+        <nav class="navigationBot">
             <ul>
-                <li><a href="">Mentions légales</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="pages/mentions.html">Mentions légales</a></li>
+                <li><a href="#about">Contact</a></li>
             </ul>
         </nav>
     </footer>

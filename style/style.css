@@ -1,34 +1,70 @@
 /*https://colorhunt.co/palette/eadeb8cfb784c56824a09f57*/
 body{
-    background-color: #EADEB8;
+    background-color: #ece5cb;
 	font-family: 'Candara','sans-serif';
 	font-weight: 300;
     margin: 0;
     font-size: 22px;
+    border: 6px solid #7c7c42;
+    overflow-x: hidden;
 }
-nav.navbar{
+.navigationTopMobile{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navigationTopMobile select{
+    background-color: #bcbeae;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    color: #C56824;
+    font-weight: bold;
+}
+.navigationTop{
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
+}
+.navigationTop, .navigationBot{
     width: 100%;
+    background-color: #dcdfcd;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-nav ul{
+.navigationBot{
+    bottom: 0;
+    z-index: 9999;
+}
+.navigationTop ul, .navigationBot ul{
     list-style: none;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
 }
-.nav-link{
+.navigationTop ul li a, .navigationBot ul li a{
     text-transform: uppercase;
-    font-weight: 500;
-    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 20px;
     color: #C56824;
-    padding: 0.5rem 2rem;
 }
-#home
-{
+/*Pour que les liens de la nav tombent un peu avant, offset:*/
+:target{
+    scroll-margin-top: 70px;
+}
+#home{
     background: #c7b691;
     color: floralwhite;
     background-image: url(../img/bghome.png);
     height: 100vh;
+    width: 100%;
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -55,29 +91,43 @@ h2{
 .logo img{
     width: 70px;
 }
+.container{
+    width: 85%;
+    margin: 5% auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+section{
+    padding: 5%;
+}
 h3{
     color: #7c7c42;
-}
-#about, #skills{
-    margin: 5% 10%;
-    height: 80vh;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 2px;
 }
 #about img{
-    height: 40vh;
+    height: 15em;
     width: auto;
 }
 .profil{
-    padding: 0 15%;
+    padding: 0 10%;
 }
 .contact{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
-    margin: 5%;
+    margin: 5% auto;
 }
 .contact button{
     border-radius: 5px;
     background-color: #C56824;
     font-size: 22px;
     border: none;
+}
+.contact button:hover{
+    background-color: #8b532b;
 }
 .modal-dialog {
     margin: 20rem auto;
@@ -96,26 +146,77 @@ h3{
 meter{
     width: 50%;
 }
+#experience .col{
+    border-left: 2px dotted #bcbeae;
+    border-right: 2px dotted #bcbeae;
+}
+.para{
+    width: 90%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+h4{
+    text-decoration: underline;
+    padding-bottom: 2%;
+}
+h5{
+    line-height: 25px;
+}
+.carouselOuter{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+#carousel{
+    width: 65%;
+}
 @media (max-width:900px){
+    body{
+        font-size: 20px;
+    }
+    .navigationTop{
+        display: none;
+    }
+    .navigationTopMobile{
+        display: block;
+        height: 40px;
+    }
     #home{
         padding-top: 30%;
+        height: 70vh;
     }
-    #about{
-        margin: 10% 10%;
+    h1{
+        font-size: 40px;
     }
-    p{
-        font-size: 22px;
+    h2{
+        font-size: 30px;
     }
-    .profil{
-        padding: 0;
+    h3{
+        font-size: 27px;
     }
-    .contact{
-        padding: 5% 10%;
+    .container{
+        width: 90%;
     }
-    .contact button{
-
+    .section{
+        margin: 8% 0;
+    }
+    .row:not(#home .row){
+        display: block;
+    }
+    .col, .col-1, .container .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+        width: 100%;
+    }
+    .logo img{
+        width: 50px;
     }
     .competence{
         display: block;
+    }
+    .contact button{
+        font-size: 17px;
+        width: 40%;
+    }
+    #carousel{
+        width: 100%;
     }
 }
